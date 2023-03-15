@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    {{-- breadcrumb --}}
+ 
 <div class="text-sm breadcrumbs ml-5 pt-5  text-primary">
     <ul>
       <li>Dashboard</li>
@@ -25,6 +25,8 @@
     <div class="container">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci non voluptas incidunt repellendus nisi commodi error ab architecto similique esse.
         </p>
+
+        <button onclick="showToast()">Click</button>
     </div>
 </x-card>
 

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    @stack('scripts')
 
 </head>
 
@@ -27,7 +26,17 @@
     </div>
 
 </section>
+@stack('scripts')
 
+@if(session('status'))
+    <script>
+        @if(is_array(session('status')))
+            const data = @json(session('status'))
+            showToast(data.message,data.icon)
+        @else
+            showToast("{{ session('status') }}")
+        @endif
+    </script>
+@endif
 </body>
-
 </html>
